@@ -1,0 +1,88 @@
+﻿@model MyDynastyHomesAuth.Models.Utility
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Utility</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MyHous.StreetNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyHous.StreetNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Furnaces)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Furnaces)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AirConditioning_Units)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AirConditioning_Units)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hot_Water_Heater)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hot_Water_Heater)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Electric)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Electric)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plumbing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plumbing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sewer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sewer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepairCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepairCost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

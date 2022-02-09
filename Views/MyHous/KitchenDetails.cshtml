@@ -1,0 +1,99 @@
+﻿@model MyDynastyHomesAuth.Models.Kitchen
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kitchen</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MyHous.StreetNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyHous.StreetNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Refrigerator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Refrigerator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oven)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Oven)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Microwave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Microwave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dishwasher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dishwasher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Garbage_Disposal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Garbage_Disposal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cabinets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cabinets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Counter_Tops_SQFT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Counter_Tops_SQFT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepairCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepairCost)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

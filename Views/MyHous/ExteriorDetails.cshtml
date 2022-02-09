@@ -1,0 +1,82 @@
+﻿@model MyDynastyHomesAuth.Models.Exterior
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exterior</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MyHous.StreetNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyHous.StreetNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_Windows)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_Windows)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Siding_SQFT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Siding_SQFT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Roof_SQFT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Roof_SQFT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Of_Foundation_Walls)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Of_Foundation_Walls)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Of_Doors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Of_Doors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Of_Trees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Of_Trees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepairCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepairCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

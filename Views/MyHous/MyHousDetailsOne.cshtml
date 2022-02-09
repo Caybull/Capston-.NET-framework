@@ -1,0 +1,117 @@
+﻿@model MyDynastyHomesAuth.Models.MyHous
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>House Details</h2>
+
+
+<h4>My House</h4>
+<table class="table">
+    <tr>
+
+        <th>
+            City
+        </th>
+        <th>
+            Lot Size
+        </th>
+        <th>
+            Square Footage
+        </th>
+        <th>
+            Stories
+        </th>
+        <th>
+            Bedrooms
+        </th>
+        <th>
+            Bathrooms
+        </th>
+        <th>
+            Total Cost
+        </th>
+        <th>
+            Bathroom Costs
+        </th>
+        <th>
+            Exterior Costs
+        </th>
+        <th>
+            Interior Costs
+        </th>
+        <th>
+            Kitchen Costs
+        </th>
+        <th>
+            Utility Costs
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.City)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.LotSize)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.SquareFootage)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Stories)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.BedroomCount)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.BathroomCount)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.RenovationCost)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.BathroomCost)<br />
+           
+            @Html.ActionLink("Bathroom Repairs", "BathroomsCost", new {id = Model.ID})<br />
+            @Html.ActionLink("Edit Bathroom", "EditBathroom", new { id = Model.ID })<br />
+            @Html.ActionLink("Delete Bathroom", "DeleteBathroom", new { id = Model.ID })<br />
+            @Html.ActionLink("Bathroom Details", "BathroomDetails", new { id = Model.ID })
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.ExteriorCost)<br />
+            @Html.ActionLink("Exterior Repairs", "ExteriorCost", new { id = Model.ID })<br />
+            @Html.ActionLink("Edit Exterior", "EditExterior", new { id = Model.ID })<br />
+            @Html.ActionLink("Delete Exterior", "DeleteExterior", new { id = Model.ID })<br />
+            @Html.ActionLink("Exterior Details", "ExteriorDetails", new { id = Model.ID })
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.InteriorCost)<br />
+            @Html.ActionLink("Interior Repairs", "InteriorCost", new { id = Model.ID })<br />
+            @Html.ActionLink("Edit Interior", "EditInterior", new { id = Model.ID })<br />
+            @Html.ActionLink("Delete Interior", "DeleteInterior", new { id = Model.ID })<br />
+            @Html.ActionLink("Interior Details", "InteriorDetails", new { id = Model.ID })
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.KitchenCost)<br />
+            @Html.ActionLink("Kitchen Repairs", "KitchenCost", new { id = Model.ID })<br />
+            @Html.ActionLink("Edit Kitchen", "EditKitchen", new { id = Model.ID })<br />
+            @Html.ActionLink("Delete Kitchen", "DeleteKitchen", new { id = Model.ID })<br />
+            @Html.ActionLink("Kitchen Details", "KitchenDetails", new { id = Model.ID })
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.UtilitiesCost)<br />
+            @Html.ActionLink("Utilities Repairs", "UtilitiesCost", new { id = Model.ID })<br />
+            @Html.ActionLink("Edit Utilities", "EditUtility", new { id = Model.ID })<br />
+            @Html.ActionLink("Delete Utilities", "DeleteUtility", new { id = Model.ID })<br />
+            @Html.ActionLink("Utility Details", "UtilityDetails", new { id = Model.ID })
+        </td>
+
+    </tr>
+
+
+</table>
+

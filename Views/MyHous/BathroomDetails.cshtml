@@ -1,0 +1,58 @@
+﻿@model MyDynastyHomesAuth.Models.Bathroom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bathroom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MyHous.StreetNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyHous.StreetNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Of_Sinks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Of_Sinks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Of_Toilets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Of_Toilets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Of_Showers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Of_Showers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepairCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepairCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

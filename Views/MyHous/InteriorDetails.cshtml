@@ -1,0 +1,82 @@
+﻿@model MyDynastyHomesAuth.Models.Interior
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Interior</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MyHous.StreetNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyHous.StreetNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paint_Number_Of_Rooms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paint_Number_Of_Rooms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drywall_SQFT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drywall_SQFT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Floors_SQFT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Floors_SQFT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Of_Light_Fixtures)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Of_Light_Fixtures)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Baseboard_Linear_Foot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Baseboard_Linear_Foot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subfloor_SQFT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subfloor_SQFT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepairCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepairCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,85 @@
+﻿@model MyDynastyHomesAuth.Models.Utility
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Utility</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MyHous.StreetNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyHous.StreetNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Furnaces)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Furnaces)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AirConditioning_Units)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AirConditioning_Units)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hot_Water_Heater)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hot_Water_Heater)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Electric)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Electric)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plumbing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plumbing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sewer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sewer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepairCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepairCost)
+        </dd>
+
+  
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

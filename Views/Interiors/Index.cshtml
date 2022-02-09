@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MyDynastyHomesAuth.Models.Interior>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MyHous.StreetNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepairMultiplier.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Paint_Number_Of_Rooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Drywall_SQFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Floors_SQFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number_Of_Light_Fixtures)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Baseboard_Linear_Foot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subfloor_SQFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepairCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HouseID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RenovationCostID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MyHous.StreetNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepairMultiplier.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Paint_Number_Of_Rooms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Drywall_SQFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Floors_SQFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number_Of_Light_Fixtures)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Baseboard_Linear_Foot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subfloor_SQFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepairCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HouseID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RenovationCostID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

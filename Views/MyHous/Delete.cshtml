@@ -1,0 +1,192 @@
+﻿@model MyDynastyHomesAuth.Models.MyHous
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MyHous</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bathroom.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bathroom.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exterior.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exterior.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interior.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interior.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kitchen.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kitchen.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Utility.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Utility.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StreetNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StreetNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StreetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StreetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LotSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LotSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SquareFootage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SquareFootage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BedroomCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BedroomCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BathroomCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BathroomCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RenovationCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RenovationCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BathroomCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BathroomCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExteriorCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExteriorCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InteriorCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InteriorCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KitchenCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KitchenCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UtilitiesCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UtilitiesCost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

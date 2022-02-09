@@ -1,0 +1,201 @@
+﻿@model IEnumerable<MyDynastyHomesAuth.Models.RepairMultiplier>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BathroomSink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Toilet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shower)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Window)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SidingPerSQFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Roof)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoundationWall)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExteriorDoor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TreeRemoval)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaintPerRoom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DrywallPerSQFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FloorsPerSQFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LightFixture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Baseboards)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubfloorPerSQFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Refrigerator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Oven)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Microwave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dishwasher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GarbageDisposal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cabinet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CounterTopsPerSQFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KitchenSink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FurnacePerStory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AirConditioningUnitPerStory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HotWaterHeater)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Electric)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plumbing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sewer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BathroomSink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Toilet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shower)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Window)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SidingPerSQFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Roof)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FoundationWall)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExteriorDoor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TreeRemoval)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaintPerRoom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DrywallPerSQFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FloorsPerSQFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LightFixture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Baseboards)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubfloorPerSQFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Refrigerator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Oven)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Microwave)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dishwasher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GarbageDisposal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cabinet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CounterTopsPerSQFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KitchenSink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FurnacePerStory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AirConditioningUnitPerStory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HotWaterHeater)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Electric)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plumbing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sewer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
