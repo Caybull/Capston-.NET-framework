@@ -9,6 +9,7 @@ namespace MyDynastyHomesAuth.Models
     [Table("Exterior")]
     public partial class Exterior
     {
+        [Display(Name = "Street Number")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
         [Display(Name = "Windows")]

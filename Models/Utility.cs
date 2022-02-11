@@ -8,6 +8,8 @@ namespace MyDynastyHomesAuth.Models
 
     public partial class Utility
     {
+
+        [Display(Name = "Street Number")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
@@ -28,7 +30,7 @@ namespace MyDynastyHomesAuth.Models
 
         [Display(Name = "Sewer")]
         public decimal Sewer { get; set; }
-
+        [Display(Name = "Cost")]
         public decimal? RepairCost { get; set; }
 
        

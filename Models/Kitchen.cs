@@ -9,6 +9,8 @@ namespace MyDynastyHomesAuth.Models
     [Table("Kitchen")]
     public partial class Kitchen
     {
+
+        [Display(Name = "Street Number")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
         [Display(Name = "Refrigerators")]

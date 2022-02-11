@@ -2,10 +2,13 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace MyDynastyHomesAuth.Models
 {
-    public partial class HouseContext : DbContext
+   
+
+        public partial class HouseContext : DbContext
     {
         public HouseContext()
             : base("name=HouseContext")

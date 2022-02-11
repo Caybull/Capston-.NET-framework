@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<MyDynastyHomesAuth.Models.MyHous>
-
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 @{
     ViewBag.Title = "Index";
 }
@@ -11,8 +13,8 @@
 </p>
 <table class="table">
     <tr>
-     
-    
+
+
         <th>
             @Html.DisplayNameFor(model => model.StreetNumber)
         </th>
@@ -40,40 +42,41 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-    
-        <td>
-            @Html.DisplayFor(modelItem => item.StreetNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StreetName)
-        </td>
+    @foreach (var item in Model)
+    {
+        <tr>
 
-        <td>
-            @Html.DisplayFor(modelItem => item.RenovationCost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BathroomCost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ExteriorCost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InteriorCost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.KitchenCost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UtilitiesCost)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "MyHousDetailsOne", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.RenovationCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BathroomCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExteriorCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InteriorCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KitchenCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UtilitiesCost)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "MyHousDetailsOne", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>

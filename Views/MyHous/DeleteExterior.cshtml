@@ -1,5 +1,7 @@
 ﻿@model MyDynastyHomesAuth.Models.Exterior
-
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 @{
     ViewBag.Title = "Delete";
 }
@@ -66,18 +68,10 @@
         <dd>
             @Html.DisplayFor(model => model.Number_Of_Trees)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.RepairCost)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.RepairCost)
-        </dd>
-
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

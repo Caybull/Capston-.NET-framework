@@ -1,5 +1,7 @@
 ﻿@model MyDynastyHomesAuth.Models.MyHous
-
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 @{
     ViewBag.Title = "Details";
 }
@@ -75,43 +77,69 @@
         </td>
         <td>
             @Html.DisplayFor(model => model.BathroomCost)<br />
-           
-            @Html.ActionLink("Bathroom Repairs", "BathroomsCost", new {id = Model.ID})<br />
-            @Html.ActionLink("Edit Bathroom", "EditBathroom", new { id = Model.ID })<br />
-            @Html.ActionLink("Delete Bathroom", "DeleteBathroom", new { id = Model.ID })<br />
-            @Html.ActionLink("Bathroom Details", "BathroomDetails", new { id = Model.ID })
+            <div class="dropdown">
+                <button onclick="bathroomFunction()" class="dropbtn">Options</button>
+                <div id="bathroomDropdown" class="dropdown-content">
+                    <a href="https://localhost:44314/MyHous/BathroomsCost/5">Create</a>
+                    <a href="https://localhost:44314/MyHous/EditBathroom/5">Edit</a>
+                    <a href="https://localhost:44314/MyHous/DeleteBathroom/5">Delete</a>
+                    <a href="https://localhost:44314/MyHous/BathroomDetails/5">Details</a>
+                </div>
+            </div>
         </td>
         <td>
             @Html.DisplayFor(model => model.ExteriorCost)<br />
-            @Html.ActionLink("Exterior Repairs", "ExteriorCost", new { id = Model.ID })<br />
-            @Html.ActionLink("Edit Exterior", "EditExterior", new { id = Model.ID })<br />
-            @Html.ActionLink("Delete Exterior", "DeleteExterior", new { id = Model.ID })<br />
-            @Html.ActionLink("Exterior Details", "ExteriorDetails", new { id = Model.ID })
+            <div class="dropdown">
+                <button onclick="exteriorFunction()" class="dropbtn">Options</button>
+                <div id="exteriorDropdown" class="dropdown-content">
+                    <a href="https://localhost:44314/MyHous/ExteriorCost/5">Create</a>
+                    <a href="https://localhost:44314/MyHous/EditExterior/5">Edit</a>
+                    <a href="https://localhost:44314/MyHous/DeleteExterior/5">Delete</a>
+                    <a href="https://localhost:44314/MyHous/ExteriorDetails/5">Details</a>
+                </div>
+            </div>
+
         </td>
         <td>
             @Html.DisplayFor(model => model.InteriorCost)<br />
-            @Html.ActionLink("Interior Repairs", "InteriorCost", new { id = Model.ID })<br />
-            @Html.ActionLink("Edit Interior", "EditInterior", new { id = Model.ID })<br />
-            @Html.ActionLink("Delete Interior", "DeleteInterior", new { id = Model.ID })<br />
-            @Html.ActionLink("Interior Details", "InteriorDetails", new { id = Model.ID })
+            <div class="dropdown">
+                <button onclick="interiorFunction()" class="dropbtn">Options</button>
+                <div id="interiorDropdown" class="dropdown-content">
+                    <a href="https://localhost:44314/MyHous/InteriorCost/5">Create</a>
+                    <a href="https://localhost:44314/MyHous/EditInterior/5">Edit</a>
+                    <a href="https://localhost:44314/MyHous/DeleteInterior/5">Delete</a>
+                    <a href="https://localhost:44314/MyHous/InteriorDetails/5">Details</a>
+                </div>
+            </div>
+
         </td>
         <td>
             @Html.DisplayFor(model => model.KitchenCost)<br />
-            @Html.ActionLink("Kitchen Repairs", "KitchenCost", new { id = Model.ID })<br />
-            @Html.ActionLink("Edit Kitchen", "EditKitchen", new { id = Model.ID })<br />
-            @Html.ActionLink("Delete Kitchen", "DeleteKitchen", new { id = Model.ID })<br />
-            @Html.ActionLink("Kitchen Details", "KitchenDetails", new { id = Model.ID })
+            <div class="dropdown">
+                <button onclick="kitchenFunction()" class="dropbtn">Options</button>
+                <div id="kitchenDropdown" class="dropdown-content">
+                    <a href="https://localhost:44314/MyHous/KitchenCost/5">Create</a>
+                    <a href="https://localhost:44314/MyHous/EditKitchen/5">Edit</a>
+                    <a href="https://localhost:44314/MyHous/DeleteKitchen/5">Delete</a>
+                    <a href="https://localhost:44314/MyHous/KitchenDetails/5">Details</a>
+                </div>
+            </div>
         </td>
         <td>
             @Html.DisplayFor(model => model.UtilitiesCost)<br />
-            @Html.ActionLink("Utilities Repairs", "UtilitiesCost", new { id = Model.ID })<br />
-            @Html.ActionLink("Edit Utilities", "EditUtility", new { id = Model.ID })<br />
-            @Html.ActionLink("Delete Utilities", "DeleteUtility", new { id = Model.ID })<br />
-            @Html.ActionLink("Utility Details", "UtilityDetails", new { id = Model.ID })
+            <div class="dropdown">
+                <button onclick="utilityFunction()" class="dropbtn">Options</button>
+                <div id="utilityDropdown" class="dropdown-content">
+                    <a href="https://localhost:44314/MyHous/UtilitiesCost/5">Create</a>
+                    <a href="https://localhost:44314/MyHous/EditUtility/5">Edit</a>
+                    <a href="https://localhost:44314/MyHous/DeleteUtility/5">Delete</a>
+                    <a href="https://localhost:44314/MyHous/UtilityDetails/5">Details</a>
+                </div>
+            </div>
         </td>
 
     </tr>
-
+  
 
 </table>
 

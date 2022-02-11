@@ -248,6 +248,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Images\Screenshot 2022-02-09 at 6.17.57 PM.jpeg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -316,7 +317,6 @@
     <Content Include="Views\MyHous\DeleteInterior.cshtml" />
     <Content Include="Views\MyHous\InteriorDetails.cshtml" />
     <Content Include="Views\MyHous\EditInterior.cshtml" />
-    <Content Include="Views\Interiors\Index.cshtml" />
     <Content Include="Views\MyHous\ExteriorCost.cshtml" />
     <Content Include="Views\MyHous\DeleteExterior.cshtml" />
     <Content Include="Views\MyHous\ExteriorDetails.cshtml" />
