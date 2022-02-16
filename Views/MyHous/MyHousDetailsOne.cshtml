@@ -1,145 +1,327 @@
 ﻿@model MyDynastyHomesAuth.Models.MyHous
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@*@{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }*@
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>House Details</h2>
+<!DOCTYPE html>
 
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<h4>My House</h4>
-<table class="table">
-    <tr>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-        <th>
-            City
-        </th>
-        <th>
-            Lot Size
-        </th>
-        <th>
-            Square Footage
-        </th>
-        <th>
-            Stories
-        </th>
-        <th>
-            Bedrooms
-        </th>
-        <th>
-            Bathrooms
-        </th>
-        <th>
-            Total Cost
-        </th>
-        <th>
-            Bathroom Costs
-        </th>
-        <th>
-            Exterior Costs
-        </th>
-        <th>
-            Interior Costs
-        </th>
-        <th>
-            Kitchen Costs
-        </th>
-        <th>
-            Utility Costs
-        </th>
-        <th></th>
-    </tr>
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
 
+<style>
+        body {
+            background-image: url('http://i.huffpost.com/gen/1910124/images/o-MORTGAGE-facebook.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /*      text-size-adjust: 200%;
+            text-align: center;*/
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+</style>
+<body>
 
-    <tr>
-        <td>
-            @Html.DisplayFor(model => model.City)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.LotSize)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.SquareFootage)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.Stories)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.BedroomCount)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.BathroomCount)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.RenovationCost)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.BathroomCost)<br />
-            <div class="dropdown">
-                <button onclick="bathroomFunction()" class="dropbtn">Options</button>
-                <div id="bathroomDropdown" class="dropdown-content">
-                    <a href="https://localhost:44314/MyHous/BathroomsCost/5">Create</a>
-                    <a href="https://localhost:44314/MyHous/EditBathroom/5">Edit</a>
-                    <a href="https://localhost:44314/MyHous/DeleteBathroom/5">Delete</a>
-                    <a href="https://localhost:44314/MyHous/BathroomDetails/5">Details</a>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="w3-container">
+                <h2>Bathroom</h2>
+
+                <div class="w3-card-4" style="width:50%">
+                    <img src="http://www.clker.com/cliparts/6/6/9/e/12657693331780036474bathroom-02.png" alt="Alps" style="width:100%">
+                    <div class="w3-container w3-center">
+                        <p>
+                            @Html.DisplayFor(model => model.BathroomCount) Bathrooms<br />
+                            Bathroom Cost: @Html.DisplayFor(model => model.BathroomCost)
+                        </p>
+                        <div class="dropdown">
+                            <button onclick="bathroomFunction()" class="dropbtn">Options</button>
+                            <div id="bathroomDropdown" class="dropdown-content">
+                                @Html.ActionLink("Bathroom Repairs", "BathroomsCost", new { id = Model.ID })<br />
+                                @Html.ActionLink("Edit Bathroom", "EditBathroom", new { id = Model.ID })<br />
+                                @Html.ActionLink("Delete Bathroom", "DeleteBathroom", new { id = Model.ID })<br />
+                                @Html.ActionLink("Bathroom Details", "BathroomDetails", new { id = Model.ID })
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.ExteriorCost)<br />
-            <div class="dropdown">
-                <button onclick="exteriorFunction()" class="dropbtn">Options</button>
-                <div id="exteriorDropdown" class="dropdown-content">
-                    <a href="https://localhost:44314/MyHous/ExteriorCost/5">Create</a>
-                    <a href="https://localhost:44314/MyHous/EditExterior/5">Edit</a>
-                    <a href="https://localhost:44314/MyHous/DeleteExterior/5">Delete</a>
-                    <a href="https://localhost:44314/MyHous/ExteriorDetails/5">Details</a>
+        </div>
+        <div class="col-md-3">
+            <div class="w3-container">
+                <h2>Exterior</h2>
+
+                <div class="w3-card-4" style="width:50%">
+                    <img src="https://media.istockphoto.com/vectors/home-insurance-house-and-umbrella-vector-id153390395?k=6&m=153390395&s=612x612&w=0&h=95_nnvvkj6jVrWZ5DnmuIlt3e30BwHNhrboXG9XFvZs=" alt="Alps" style="width:100%">
+                    <div class="w3-container w3-center">
+                        <p>
+
+                            Exterior Cost: @Html.DisplayFor(model => model.ExteriorCost)
+                        </p>
+                        <div class="dropdown">
+                            <button onclick="exteriorFunction()" class="dropbtn">Options</button>
+                            <div id="exteriorDropdown" class="dropdown-content">
+
+                                @Html.ActionLink("Exterior Repairs", "ExteriorCost", new { id = Model.ID })<br />
+                                @Html.ActionLink("Edit Exterior", "EditExterior", new { id = Model.ID })<br />
+                                @Html.ActionLink("Delete Exterior", "DeleteExterior", new { id = Model.ID })<br />
+                                @Html.ActionLink("Exterior Details", "ExteriorDetails", new { id = Model.ID })
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="w3-container">
+                <h2>Interior</h2>
 
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.InteriorCost)<br />
-            <div class="dropdown">
-                <button onclick="interiorFunction()" class="dropbtn">Options</button>
-                <div id="interiorDropdown" class="dropdown-content">
-                    <a href="https://localhost:44314/MyHous/InteriorCost/5">Create</a>
-                    <a href="https://localhost:44314/MyHous/EditInterior/5">Edit</a>
-                    <a href="https://localhost:44314/MyHous/DeleteInterior/5">Delete</a>
-                    <a href="https://localhost:44314/MyHous/InteriorDetails/5">Details</a>
+                <div class="w3-card-4" style="width:50%">
+                    <img src="https://media.istockphoto.com/vectors/family-and-home-renovation-cartoon-illustration-vector-id1152559264?k=6&m=1152559264&s=612x612&w=0&h=BPUqSl5uskf48fP42zznTyrN-2ih3ZGl9zYwb7L6EpM=" alt="Alps" style="width:100%">
+                    <div class="w3-container w3-center">
+                        <p>
+                            @Html.DisplayFor(model => model.BedroomCount) Bedrooms<br />
+                            Interior Cost: @Html.DisplayFor(model => model.InteriorCost)
+                        </p>
+                        <div class="dropdown">
+                            <button onclick="interiorFunction()" class="dropbtn">Options</button>
+                            <div id="interiorDropdown" class="dropdown-content">
+
+
+                                @Html.ActionLink("Interior Repairs", "InteriorCost", new { id = Model.ID })<br />
+                                @Html.ActionLink("Edit Interior", "EditInterior", new { id = Model.ID })<br />
+                                @Html.ActionLink("Delete Interior", "DeleteInterior", new { id = Model.ID })<br />
+                                @Html.ActionLink("Interior Details", "InteriorDetails", new { id = Model.ID })
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="col-md-3">
+            <div class="w3-container">
+                <h2>Kitchen</h2>
 
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.KitchenCost)<br />
-            <div class="dropdown">
-                <button onclick="kitchenFunction()" class="dropbtn">Options</button>
-                <div id="kitchenDropdown" class="dropdown-content">
-                    <a href="https://localhost:44314/MyHous/KitchenCost/5">Create</a>
-                    <a href="https://localhost:44314/MyHous/EditKitchen/5">Edit</a>
-                    <a href="https://localhost:44314/MyHous/DeleteKitchen/5">Delete</a>
-                    <a href="https://localhost:44314/MyHous/KitchenDetails/5">Details</a>
+                <div class="w3-card-4" style="width:50%">
+                    <img src="https://clipground.com/images/clip-art-kitchen-14.jpg" alt="Alps" style="width:100%">
+                    <div class="w3-container w3-center">
+                        <p>
+
+                            Kitchen Cost: @Html.DisplayFor(model => model.KitchenCost)
+                        </p>
+                        <div class="dropdown">
+                            <button onclick="kitchenFunction()" class="dropbtn">Options</button>
+                            <div id="kitchenDropdown" class="dropdown-content">
+                                @Html.ActionLink("Kitchen Repairs", "KitchenCost", new { id = Model.ID })<br />
+                                @Html.ActionLink("Edit Kitchen", "EditKitchen", new { id = Model.ID })<br />
+                                @Html.ActionLink("Delete Kitchen", "DeleteKitchen", new { id = Model.ID })<br />
+                                @Html.ActionLink("Kitchen Details", "KitchenDetails", new { id = Model.ID })
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.UtilitiesCost)<br />
-            <div class="dropdown">
-                <button onclick="utilityFunction()" class="dropbtn">Options</button>
-                <div id="utilityDropdown" class="dropdown-content">
-                    <a href="https://localhost:44314/MyHous/UtilitiesCost/5">Create</a>
-                    <a href="https://localhost:44314/MyHous/EditUtility/5">Edit</a>
-                    <a href="https://localhost:44314/MyHous/DeleteUtility/5">Delete</a>
-                    <a href="https://localhost:44314/MyHous/UtilityDetails/5">Details</a>
+        </div>
+        </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="w3-container">
+                <h2>Utilities</h2>
+
+                <div class="w3-card-4" style="width:50%">
+                    <img src="https://thumbs.dreamstime.com/b/furnace-repair-44291.jpg" alt="Alps" style="width:100%">
+                    <div class="w3-container w3-center">
+                        <p>
+
+                            Utilities Cost:  @Html.DisplayFor(model => model.UtilitiesCost)<br />
+                        </p>
+                        <div class="dropdown">
+                            <button onclick="utilityFunction()" class="dropbtn">Options</button>
+                            <div id="utilityDropdown" class="dropdown-content">
+
+                                @Html.ActionLink("Utilities Repairs", "UtilitiesCost", new { id = Model.ID })<br />
+                                @Html.ActionLink("Edit Utilities", "EditUtility", new { id = Model.ID })<br />
+                                @Html.ActionLink("Delete Utilities", "DeleteUtility", new { id = Model.ID })<br />
+                                @Html.ActionLink("Utility Details", "UtilityDetails", new { id = Model.ID })
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </td>
+</div>
+        </div>
 
-    </tr>
-  
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
 
-</table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Dynasty Properties LLC</p>
+            </footer>
+</body>
+</html>
+
+
+
+@*<table class="table">
+        <tr>
+
+            <th>
+                City
+            </th>
+            <th>
+                Lot Size
+            </th>
+            <th>
+                Square Footage
+            </th>
+            <th>
+                Stories
+            </th>
+            <th>
+                Bedrooms
+            </th>
+            <th>
+                Bathrooms
+            </th>
+            <th>
+                Total Cost
+            </th>
+            <th>
+                Bathroom Costs
+            </th>
+            <th>
+                Exterior Costs
+            </th>
+            <th>
+                Interior Costs
+            </th>
+            <th>
+                Kitchen Costs
+            </th>
+            <th>
+                Utility Costs
+            </th>
+            <th></th>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.City)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.LotSize)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.SquareFootage)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Stories)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.BedroomCount)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.BathroomCount)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.RenovationCost)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.BathroomCost)<br />
+                <div class="dropdown">
+                    <button onclick="bathroomFunction()" class="dropbtn">Options</button>
+                    <div id="bathroomDropdown" class="dropdown-content">
+                        @Html.ActionLink("Bathroom Repairs", "BathroomsCost", new { id = Model.ID })<br />
+                        @Html.ActionLink("Edit Bathroom", "EditBathroom", new { id = Model.ID })<br />
+                        @Html.ActionLink("Delete Bathroom", "DeleteBathroom", new { id = Model.ID })<br />
+                        @Html.ActionLink("Bathroom Details", "BathroomDetails", new { id = Model.ID })
+                    </div>
+                </div>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ExteriorCost)<br />
+                <div class="dropdown">
+                    <button onclick="exteriorFunction()" class="dropbtn">Options</button>
+                    <div id="exteriorDropdown" class="dropdown-content">
+
+                        @Html.ActionLink("Exterior Repairs", "ExteriorCost", new { id = Model.ID })<br />
+                        @Html.ActionLink("Edit Exterior", "EditExterior", new { id = Model.ID })<br />
+                        @Html.ActionLink("Delete Exterior", "DeleteExterior", new { id = Model.ID })<br />
+                        @Html.ActionLink("Exterior Details", "ExteriorDetails", new { id = Model.ID })
+                    </div>
+                </div>
+
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.InteriorCost)<br />
+                <div class="dropdown">
+                    <button onclick="interiorFunction()" class="dropbtn">Options</button>
+                    <div id="interiorDropdown" class="dropdown-content">
+
+
+                        @Html.ActionLink("Interior Repairs", "InteriorCost", new { id = Model.ID })<br />
+                        @Html.ActionLink("Edit Interior", "EditInterior", new { id = Model.ID })<br />
+                        @Html.ActionLink("Delete Interior", "DeleteInterior", new { id = Model.ID })<br />
+                        @Html.ActionLink("Interior Details", "InteriorDetails", new { id = Model.ID })
+                    </div>
+                </div>
+
+            </td>
+            <td>
+
+                @Html.DisplayFor(model => model.KitchenCost)<br />
+
+                <div class="dropdown">
+                    <button onclick="kitchenFunction()" class="dropbtn">Options</button>
+                    <div id="kitchenDropdown" class="dropdown-content">
+                        @Html.ActionLink("Kitchen Repairs", "KitchenCost", new { id = Model.ID })<br />
+                        @Html.ActionLink("Edit Kitchen", "EditKitchen", new { id = Model.ID })<br />
+                        @Html.ActionLink("Delete Kitchen", "DeleteKitchen", new { id = Model.ID })<br />
+                        @Html.ActionLink("Kitchen Details", "KitchenDetails", new { id = Model.ID })
+                    </div>
+                </div>
+
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.UtilitiesCost)<br />
+                <div class="dropdown">
+                    <button onclick="utilityFunction()" class="dropbtn">Options</button>
+                    <div id="utilityDropdown" class="dropdown-content">
+
+                        @Html.ActionLink("Utilities Repairs", "UtilitiesCost", new { id = Model.ID })<br />
+                        @Html.ActionLink("Edit Utilities", "EditUtility", new { id = Model.ID })<br />
+                        @Html.ActionLink("Delete Utilities", "DeleteUtility", new { id = Model.ID })<br />
+                        @Html.ActionLink("Utility Details", "UtilityDetails", new { id = Model.ID })
+                    </div>
+                </div>
+
+            </td>
+
+        </tr>
+
+
+    </table>*@
+
+
+
+
 

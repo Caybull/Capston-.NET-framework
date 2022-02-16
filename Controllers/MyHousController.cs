@@ -138,12 +138,12 @@ namespace MyDynastyHomesAuth.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MyHous myHous = db.MyHouses.Find(id);
-            Bathroom bathroom = myHous.Bathroom;
-            if (myHous == null)
-            {
-                return HttpNotFound();
-            }
+            //MyHous myHous = db.MyHouses.Find(id);
+            Bathroom bathroom = new Bathroom();
+            //if (myHous == null)
+            //{
+            //    return HttpNotFound();
+            //}
             ViewBag.ID = new SelectList(db.MyHouses, "ID", "StreetNumber");
             ViewBag.MultiplierID = new SelectList(db.RepairMultipliers, "ID", "ID");
             return View(bathroom);
@@ -630,10 +630,10 @@ namespace MyDynastyHomesAuth.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Bathroom bathroom = db.Bathrooms.Find(id);
-            if (bathroom == null)
-            {
-                return HttpNotFound();
-            }
+            //if (bathroom == null)
+            //{
+            //    return HttpNotFound();
+            //}
             return View(bathroom);
         }
 
@@ -643,8 +643,9 @@ namespace MyDynastyHomesAuth.Controllers
         public ActionResult DeleteBathroomConfirmed(int id)
         {
             MyHous myHous = db.MyHouses.Find(id);
-            myHous.BathroomCost = 0;
+            
             Bathroom bathroom = db.Bathrooms.Find(id);
+            myHous.BathroomCost = 0;
             db.Bathrooms.Remove(bathroom);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -823,6 +824,7 @@ namespace MyDynastyHomesAuth.Controllers
                     }
                     myHous.RenovationCost = (decimal)(myHous.BathroomCost + myHous.ExteriorCost + myHous.InteriorCost + myHous.KitchenCost + myHous.UtilitiesCost);
                     List<int> houseID = new List<int>();
+                    houseID.Add(0);
                    foreach(MyHous house in db.MyHouses)
                     {
                         houseID.Add(house.ID);
@@ -831,10 +833,14 @@ namespace MyDynastyHomesAuth.Controllers
                     int highestID = houseID.Max();
                    
                     myHous.ID = highestID + 1;
+
+                   
+                
                     
+
                     auser.MyHouses.Add(myHous);
                     db.MyHouses.Add(myHous);
-
+                  
                 }
 
             }

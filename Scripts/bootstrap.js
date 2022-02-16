@@ -44,6 +44,10 @@ window.onclick = function (event) {
     }
 }
 
+
+
+
+
 function exteriorFunction() {
     document.getElementById("exteriorDropdown").classList.toggle("show");
 }
