@@ -76,6 +76,8 @@
 </head>
 <body>
     <button type="button" class="block">@Html.ActionLink("Add To My Dynasty", "Create")</button>
+
+  
     @foreach (var item in Model)
     {
         <h1>
@@ -105,6 +107,9 @@
             </div>
         </div>
     }
+
+    
+
     <footer>
         <p>&copy; @DateTime.Now.Year - Dynasty Properties LLC</p>
     </footer>

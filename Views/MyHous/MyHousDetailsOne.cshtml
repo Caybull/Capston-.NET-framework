@@ -31,7 +31,8 @@
         }
 </style>
 <body>
-
+    <h1 style="color:gold; font-family:Bahnschrift ">@Html.DisplayFor(model => model.StreetNumber) @Html.DisplayFor(model => model.StreetName) </h1>
+   
     <div class="row">
         <div class="col-md-3">
             <div class="w3-container">
@@ -40,7 +41,7 @@
                 <div class="w3-card-4" style="width:50%">
                     <img src="http://www.clker.com/cliparts/6/6/9/e/12657693331780036474bathroom-02.png" alt="Alps" style="width:100%">
                     <div class="w3-container w3-center">
-                        <p>
+                        <p style="font-size:larger">
                             @Html.DisplayFor(model => model.BathroomCount) Bathrooms<br />
                             Bathroom Cost: @Html.DisplayFor(model => model.BathroomCost)
                         </p>
@@ -64,7 +65,7 @@
                 <div class="w3-card-4" style="width:50%">
                     <img src="https://media.istockphoto.com/vectors/home-insurance-house-and-umbrella-vector-id153390395?k=6&m=153390395&s=612x612&w=0&h=95_nnvvkj6jVrWZ5DnmuIlt3e30BwHNhrboXG9XFvZs=" alt="Alps" style="width:100%">
                     <div class="w3-container w3-center">
-                        <p>
+                        <p style="font-size:larger">
 
                             Exterior Cost: @Html.DisplayFor(model => model.ExteriorCost)
                         </p>
@@ -91,10 +92,10 @@
                 <div class="w3-card-4" style="width:50%">
                     <img src="https://media.istockphoto.com/vectors/family-and-home-renovation-cartoon-illustration-vector-id1152559264?k=6&m=1152559264&s=612x612&w=0&h=BPUqSl5uskf48fP42zznTyrN-2ih3ZGl9zYwb7L6EpM=" alt="Alps" style="width:100%">
                     <div class="w3-container w3-center">
-                        <p>
+                        <p style="font-size:larger" >
                             @Html.DisplayFor(model => model.BedroomCount) Bedrooms<br />
                             Interior Cost: @Html.DisplayFor(model => model.InteriorCost)
-                        </p>
+                        </pstyle="font-size:larger">
                         <div class="dropdown">
                             <button onclick="interiorFunction()" class="dropbtn">Options</button>
                             <div id="interiorDropdown" class="dropdown-content">
@@ -117,7 +118,7 @@
                 <div class="w3-card-4" style="width:50%">
                     <img src="https://clipground.com/images/clip-art-kitchen-14.jpg" alt="Alps" style="width:100%">
                     <div class="w3-container w3-center">
-                        <p>
+                        <p style="font-size:larger">
 
                             Kitchen Cost: @Html.DisplayFor(model => model.KitchenCost)
                         </p>
@@ -143,7 +144,7 @@
                 <div class="w3-card-4" style="width:50%">
                     <img src="https://thumbs.dreamstime.com/b/furnace-repair-44291.jpg" alt="Alps" style="width:100%">
                     <div class="w3-container w3-center">
-                        <p>
+                        <p style="font-size:larger">
 
                             Utilities Cost:  @Html.DisplayFor(model => model.UtilitiesCost)<br />
                         </p>
